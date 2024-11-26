@@ -13,7 +13,7 @@ const HomePage = () => {
                 <div className="w-full flex flex-row flex-wrap lg:flex-nowrap">
                     <div className="w-full lg:w-2/3 p-4 lg:border-r border-gray-800">
                         {/* Usage box */}
-                        <div className="p-4 mb-2 border-b border-gray-800 flex flex-row flex-wrap justify-evenly">
+                        <div className="p-4 mb-2 border-b border-gray-800 flex flex-row flex-wrap justify-evenly lg:justify-between">
                             <div className="w-fit">
                                 <div className="text-3xl flex flex-row flex-wrap mb-4">
                                     <h2 className="mr-2">Current usage:</h2>
