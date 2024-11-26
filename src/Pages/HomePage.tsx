@@ -15,19 +15,19 @@ const HomePage = () => {
                         {/* Usage box */}
                         <div className="p-4 mb-2 border-b border-gray-800 flex flex-row flex-nowrap">
                             <div className="w-2/3">
-                                <div className="text-2xl flex flex-row flex-wrap mb-2">
+                                <div className="text-3xl flex flex-row flex-wrap mb-2">
                                     <h2 className="mr-2">Current usage:</h2>
                                     <h2 className="font-bold">1375 w</h2>
                                 </div>
-                                <div className="text-xl flex flex-row flex-wrap">
+                                <div className="text-2xl flex flex-row flex-wrap">
                                     <h2 className="mr-2">Today:</h2>
                                     <h2 className="font-bold">33 kWh</h2>
                                 </div>
-                                <div className="text-xl flex flex-row flex-wrap">
+                                <div className="text-2xl flex flex-row flex-wrap">
                                     <h2 className="mr-2">This week:</h2>
                                     <h2 className="font-bold">231 kWh</h2>
                                 </div>
-                                <div className="text-xl flex flex-row flex-wrap">
+                                <div className="text-2xl flex flex-row flex-wrap">
                                     <h2 className="mr-2">This month:</h2>
                                     <h2 className="font-bold">990 kWh</h2>
                                 </div>
