@@ -7,8 +7,11 @@ const BarChart = () => {
         width: "100%",
         series: [
             {
-                name: "Sales",
-                data: [50, 40, 300, 320, 500, 350, 200, 230, 500],
+                name: "Energy",
+                data: [
+                    1467, 1392, 1567, 1150, 1240, 1130, 1432, 1500, 1350, 1200,
+                    1230, 1500,
+                ],
             },
         ],
         options: {
@@ -38,6 +41,9 @@ const BarChart = () => {
                     },
                 },
                 categories: [
+                    "Jan",
+                    "Feb",
+                    "Mar",
                     "Apr",
                     "May",
                     "Jun",
@@ -92,7 +98,7 @@ const BarChart = () => {
                         series[seriesIndex as number][
                             dataPointIndex as number
                         ] +
-                        "</span>" +
+                        " kWh</span>" +
                         "</div>"
                     );
                 },
