@@ -15,7 +15,7 @@ const SysfailStatus: React.FC = () => {
       return;
     }
 
-    const eventSource = new EventSource(url);
+    const eventSource = new EventSource(url + "/client/stream");
 
     // Event listener for receiving messages
     eventSource.onmessage = (event) => {
