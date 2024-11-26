@@ -199,7 +199,7 @@ const Header = () => {
 
                 {/* <!-- Mobile menu, show/hide based on menu state. --> */}
                 <div
-                    className={`md:hidden ${burgerMenu ? "hidden" : "block"}`}
+                    className={`md:hidden ${burgerMenu ? "block" : "hidden"}`}
                     id="mobile-menu"
                 >
                     <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3 flex flex-col">
