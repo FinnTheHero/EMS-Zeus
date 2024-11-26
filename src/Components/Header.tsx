@@ -44,7 +44,7 @@ const Header = () => {
                                         label="Dashboard"
                                     />
                                     <NavLink to="/team" label="Team" />
-                                    <NavLink to="/projects" label="Projects" />
+                                    <NavLink to="/system" label="System" />
                                     <NavLink to="/calendar" label="Calendar" />
                                     <NavLink to="/reports" label="Reports" />
                                 </div>
@@ -205,7 +205,7 @@ const Header = () => {
                     <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3 flex flex-col">
                         <NavLink to="/dashboard" label="Dashboard" />
                         <NavLink to="/team" label="Team" />
-                        <NavLink to="/projects" label="Projects" />
+                        <NavLink to="/system" label="System" />
                         <NavLink to="/calendar" label="Calendar" />
                         <NavLink to="/reports" label="Reports" />
                     </div>

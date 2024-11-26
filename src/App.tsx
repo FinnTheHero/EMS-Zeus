@@ -5,6 +5,7 @@ import MainLayout from "./Layouts/MainLayout";
 import Dashboard from "./Pages/Dashboard";
 import HomePage from "./Pages/HomePage";
 import NotFoundPage from "./Pages/NotFoundPage";
+import SystemPage from "./Pages/SystemPage";
 
 function App() {
     return (
@@ -20,8 +21,9 @@ const RoutesManager = () => {
             <Routes>
                 <Route path="/" element={<MainLayout />}>
                     <Route index element={<HomePage />} />
-                    <Route path="/dashboard" element={<Dashboard />} />
                     <Route path="*" element={<NotFoundPage />} />
+                    <Route path="/dashboard" element={<Dashboard />} />
+                    <Route path="/system" element={<SystemPage />} />
                 </Route>
             </Routes>
         </Router>
