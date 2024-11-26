@@ -4,12 +4,21 @@ import NavLink from "./NavLink";
 
 const Header = () => {
     const [showUserProfileMenu, setShowUserProfileMenu] = useState(false);
+    const [burgerMenu, setBurgerMenu] = useState(false);
 
     const handleProfileClick = (e: React.MouseEvent) => {
         if (!showUserProfileMenu) {
             setShowUserProfileMenu(true);
         } else {
             setShowUserProfileMenu(false);
+        }
+    };
+
+    const handleBurgerClick = (e: React.MouseEvent) => {
+        if (!burgerMenu) {
+            setBurgerMenu(true);
+        } else {
+            setBurgerMenu(false);
         }
     };
 
@@ -146,6 +155,7 @@ const Header = () => {
                                 type="button"
                                 className="relative inline-flex items-center justify-center rounded-md bg-gray-800 p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                                 aria-controls="mobile-menu"
+                                onClick={handleBurgerClick}
                                 aria-expanded="false"
                             >
                                 <span className="absolute -inset-0.5"></span>
@@ -188,40 +198,16 @@ const Header = () => {
                 </div>
 
                 {/* <!-- Mobile menu, show/hide based on menu state. --> */}
-                <div className="md:hidden" id="mobile-menu">
-                    <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3">
-                        {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
-                        <a
-                            href="/#"
-                            className="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
-                            aria-current="page"
-                        >
-                            Dashboard
-                        </a>
-                        <a
-                            href="/#"
-                            className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                        >
-                            Team
-                        </a>
-                        <a
-                            href="/#"
-                            className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                        >
-                            Projects
-                        </a>
-                        <a
-                            href="/#"
-                            className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                        >
-                            Calendar
-                        </a>
-                        <a
-                            href="/#"
-                            className="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-                        >
-                            Reports
-                        </a>
+                <div
+                    className={`md:hidden ${burgerMenu ? "hidden" : "block"}`}
+                    id="mobile-menu"
+                >
+                    <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3 flex flex-col">
+                        <NavLink to="/dashboard" label="Dashboard" />
+                        <NavLink to="/team" label="Team" />
+                        <NavLink to="/projects" label="Projects" />
+                        <NavLink to="/calendar" label="Calendar" />
+                        <NavLink to="/reports" label="Reports" />
                     </div>
                     <div className="border-t border-gray-700 pb-3 pt-4">
                         <div className="flex items-center px-5">
