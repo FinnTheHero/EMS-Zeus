@@ -11,7 +11,7 @@ const HomePage = () => {
         <div className="flex flex-col flex-nowrap items-center justify-center">
             <div className="max-w-6xl w-full flex flex-col flex-nowrap items-center justify-center">
                 <div className="w-full flex flex-row flex-wrap lg:flex-nowrap">
-                    <div className="w-full lg:w-1/2 p-4 lg:border-r border-gray-800">
+                    <div className="w-full lg:w-2/3 p-4 lg:border-r border-gray-800">
                         {/* Usage box */}
                         <div className="p-4 mb-2 border-b border-gray-800 flex flex-row flex-nowrap">
                             <div className="w-2/3">
@@ -40,14 +40,13 @@ const HomePage = () => {
                         {/* Optimisation box */}
                         <div className="py-4 px-2 flex flex-col justify-center">
                             <div className="text-xl flex flex-row flex-wrap">
-                                <h2 className="font-bold mb-1 mr-1">
+                                <h2 className="font-bold mb-2">
                                     AI Recommendations
                                 </h2>
-                                <h2>specifically for your needs</h2>
                             </div>
 
-                            <div className="p-4 mx-2 hover:text-white hover:bg-gray-800 rounded-md">
-                                <h2 className="text-xl font-bold">
+                            <div className="p-4 m-2 bg-gray-700 rounded-md hover:cursor-pointer">
+                                <h2 className="text-xl font-bold text-white">
                                     Control HVAC devices
                                 </h2>
                                 <p className="text-lg">
@@ -55,8 +54,8 @@ const HomePage = () => {
                                 </p>
                             </div>
 
-                            <div className="p-4 mx-2 border-t border-gray-800 hover:text-white hover:bg-gray-800 hover:rounded-md">
-                                <h2 className="text-xl font-bold">
+                            <div className="p-4 m-2 bg-gray-700 rounded-md hover:cursor-pointer">
+                                <h2 className="text-xl font-bold text-white">
                                     Control HVAC devices
                                 </h2>
                                 <p className="text-lg">
@@ -64,17 +63,23 @@ const HomePage = () => {
                                 </p>
                             </div>
 
-                            <div className="p-4 mx-2 border-t border-gray-800 hover:text-white hover:bg-gray-800 hover:rounded-md">
-                                <h2 className="text-xl font-bold">
+                            <div className="p-4 m-2 bg-gray-800 rounded-md hover:cursor-pointer">
+                                <h2 className="text-xl font-bold text-white">
                                     Control HVAC devices
                                 </h2>
                                 <p className="text-lg">
                                     You need to adjust some shit bla bla bla...
                                 </p>
+                            </div>
+
+                            <div className="p-4 m-2 bg-gray-900 hover:bg-gray-800 rounded-md hover:cursor-pointer">
+                                <h2 className="text-xl font-bold text-white">
+                                    Find more...
+                                </h2>
                             </div>
                         </div>
                     </div>
-                    <div className="w-full lg:w-1/2 p-4">
+                    <div className="w-full lg:w-3/5 p-4">
                         {/* Row */}
                         <div className="mb-6">
                             <h2 className="text-xl text-center">
