@@ -1,4 +1,9 @@
-import { faFire, faSnowflake, faWind } from "@fortawesome/free-solid-svg-icons";
+import {
+    faFire,
+    faPlus,
+    faSnowflake,
+    faWind,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const HomePage = () => {
@@ -94,46 +99,38 @@ const HomePage = () => {
 
                         <div className="w-full mt-6 flex flex-row justify-evenly">
                             <div className="min-w-1/5 max-w-2/5 w-fit bg-gray-700 rounded p-4 flex flex-row justify-center items-center">
+                                <FontAwesomeIcon size="2x" icon={faWind} />
+                                <h2 className="ml-2 text-lg">Ventilation</h2>
+                            </div>
+                            <div className="min-w-1/5 max-w-2/5 w-fit bg-gray-700 rounded p-4 flex flex-row justify-center items-center">
                                 <FontAwesomeIcon size="2x" icon={faFire} />
                                 <h2 className="ml-2 text-lg">Heating</h2>
                             </div>
                             <div className="min-w-1/5 max-w-2/5 w-fit bg-gray-700 rounded p-4 flex flex-row justify-center items-center">
                                 <FontAwesomeIcon size="2x" icon={faSnowflake} />
                                 <h2 className="ml-2 text-lg">Cooling</h2>
-                            </div>
-                            <div className="min-w-1/5 max-w-2/5 w-fit bg-gray-700 rounded p-4 flex flex-row justify-center items-center">
-                                <FontAwesomeIcon size="2x" icon={faWind} />
-                                <h2 className="ml-2 text-lg">Ventilation</h2>
                             </div>
                         </div>
 
                         <div className="w-full mt-6 flex flex-row justify-evenly">
                             <div className="min-w-1/5 max-w-2/5 w-fit bg-gray-700 rounded p-4 flex flex-row justify-center items-center">
-                                <FontAwesomeIcon size="2x" icon={faFire} />
-                                <h2 className="ml-2 text-lg">Heating</h2>
-                            </div>
-                            <div className="min-w-1/5 max-w-2/5 w-fit bg-gray-700 rounded p-4 flex flex-row justify-center items-center">
                                 <FontAwesomeIcon size="2x" icon={faSnowflake} />
                                 <h2 className="ml-2 text-lg">Cooling</h2>
                             </div>
                             <div className="min-w-1/5 max-w-2/5 w-fit bg-gray-700 rounded p-4 flex flex-row justify-center items-center">
                                 <FontAwesomeIcon size="2x" icon={faWind} />
                                 <h2 className="ml-2 text-lg">Ventilation</h2>
+                            </div>
+                            <div className="min-w-1/5 max-w-2/5 w-fit bg-gray-700 rounded p-4 flex flex-row justify-center items-center">
+                                <FontAwesomeIcon size="2x" icon={faFire} />
+                                <h2 className="ml-2 text-lg">Heating</h2>
                             </div>
                         </div>
 
                         <div className="w-full mt-6 flex flex-row justify-evenly">
                             <div className="min-w-1/5 max-w-2/5 w-fit bg-gray-700 rounded p-4 flex flex-row justify-center items-center">
-                                <FontAwesomeIcon size="2x" icon={faFire} />
-                                <h2 className="ml-2 text-lg">Heating</h2>
-                            </div>
-                            <div className="min-w-1/5 max-w-2/5 w-fit bg-gray-700 rounded p-4 flex flex-row justify-center items-center">
-                                <FontAwesomeIcon size="2x" icon={faSnowflake} />
-                                <h2 className="ml-2 text-lg">Cooling</h2>
-                            </div>
-                            <div className="min-w-1/5 max-w-2/5 w-fit bg-gray-700 rounded p-4 flex flex-row justify-center items-center">
-                                <FontAwesomeIcon size="2x" icon={faWind} />
-                                <h2 className="ml-2 text-lg">Ventilation</h2>
+                                <FontAwesomeIcon icon={faPlus} />
+                                <h2 className="ml-2 text-lg">Add more</h2>
                             </div>
                         </div>
                     </div>
