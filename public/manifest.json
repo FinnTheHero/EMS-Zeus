@@ -3,12 +3,12 @@
     "name": "Energy Managment System Zeus",
     "icons": [
         {
-            "src": "logo.webp",
+            "src": "zeus.png",
             "sizes": "192x192 64x64 32x32 24x24 16x16",
-            "type": "image/webp"
+            "type": "image/png"
         },
         {
-            "src": "logo.png",
+            "src": "zeus.png",
             "type": "image/png",
             "sizes": "512x512"
         }

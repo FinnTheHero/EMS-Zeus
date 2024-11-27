@@ -28,11 +28,11 @@ const Header = () => {
                 <div className="mx-auto max-w-7xl px-5 lg:px-4 border-b border-gray-800">
                     <div className="flex h-16 items-center justify-between">
                         <div className="flex items-center">
-                            <div className="shrink-0">
+                            <div className="mt-2">
                                 <Link to="/">
                                     <img
-                                        className="size-8"
-                                        src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=500"
+                                        className="size-20"
+                                        src="/zeus.png"
                                         alt="Your Company"
                                     />
                                 </Link>
@@ -44,9 +44,6 @@ const Header = () => {
                                         label="Dashboard"
                                     />
                                     <NavLink to="/team" label="Team" />
-                                    <NavLink to="/system" label="System" />
-                                    <NavLink to="/calendar" label="Calendar" />
-                                    <NavLink to="/reports" label="Reports" />
                                 </div>
                             </div>
                         </div>
@@ -205,9 +202,6 @@ const Header = () => {
                     <div className="space-y-1 px-2 pb-3 pt-2 sm:px-3 flex flex-col">
                         <NavLink to="/dashboard" label="Dashboard" />
                         <NavLink to="/team" label="Team" />
-                        <NavLink to="/system" label="System" />
-                        <NavLink to="/calendar" label="Calendar" />
-                        <NavLink to="/reports" label="Reports" />
                     </div>
                     <div className="border-t border-gray-700 pb-3 pt-4">
                         <div className="flex items-center px-5">

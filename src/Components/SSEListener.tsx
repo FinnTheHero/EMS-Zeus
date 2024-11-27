@@ -2,59 +2,54 @@ import React, { useEffect, useState } from "react";
 import env from "react-dotenv";
 
 const SysfailStatus: React.FC = () => {
-  const [sysfail, setSysfail] = useState<boolean | null>(null); // State for Sysfail status
-  const [error, setError] = useState<string | null>(null); // State for errors
+    const [sysfail, setSysfail] = useState<boolean | null>(null);
+    const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
-    // Create an EventSource to listen for SSE updates
+    useEffect(() => {
+        const url = env.API_URL;
 
-    const url = env.API_URL;
+        if (!url) {
+            setError("API Not Found!");
+            return;
+        }
 
-    if (!url) {
-      setError("API Not Found!");
-      return;
-    }
+        const eventSource = new EventSource(url + "/client/stream");
 
-    const eventSource = new EventSource(url + "/client/stream");
+        eventSource.onmessage = (event) => {
+            try {
+                const updatedValue = JSON.parse(event.data);
+                console.log(updatedValue);
+                setSysfail(updatedValue === true);
+            } catch (err) {
+                console.error("Failed to parse SSE message:", err);
+                setError("Failed to process updates.");
+            }
+        };
 
-    // Event listener for receiving messages
-    eventSource.onmessage = (event) => {
-      try {
-        const updatedValue = JSON.parse(event.data); // Parse the incoming data
-        console.log(updatedValue);
-        setSysfail(updatedValue === true); // Update state
-      } catch (err) {
-        console.error("Failed to parse SSE message:", err);
-        setError("Failed to process updates.");
-      }
-    };
+        eventSource.onerror = () => {
+            setError("Connection lost. Retrying...");
+            eventSource.close();
+        };
 
-    // Event listener for errors
-    eventSource.onerror = () => {
-      setError("Connection lost. Retrying...");
-      eventSource.close(); // Close the connection on error
-    };
+        return () => {
+            eventSource.close();
+        };
+    }, []);
 
-    // Cleanup on component unmount
-    return () => {
-      eventSource.close();
-    };
-  }, []);
-
-  return (
-    <div className="text-3xl flex flex-row flex-nowrap items-center">
-      <h2 className="mr-2">System Status:</h2>
-      {error ? (
-        <h2 className="text-red-700 text-2xl">{error}</h2>
-      ) : sysfail !== null ? (
-        <h2 className={`${sysfail ? "text-red-700" : "text-green-700"}`}>
-          {sysfail ? " System failure!" : " Working"}
-        </h2>
-      ) : (
-        <h2 className="text-2xl">Loading status...</h2>
-      )}
-    </div>
-  );
+    return (
+        <div className="px-6 w-fit p-4 text-3xl flex flex-row flex-wrap justify-center items-center bg-gray-800 rounded-md hover:cursor-pointer">
+            <h2 className="mr-2">Status:</h2>
+            {error ? (
+                <h2 className="text-red-700">{error}</h2>
+            ) : sysfail !== null ? (
+                <h2 className={`${sysfail ? "text-red-700" : "text-green-700"}`}>
+                    {sysfail ? "System Failure!" : "System Working!"}
+                </h2>
+            ) : (
+                <h2>Loading status...</h2>
+            )}
+        </div>
+    );
 };
 
 export default SysfailStatus;

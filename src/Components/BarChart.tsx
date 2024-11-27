@@ -96,7 +96,7 @@ const BarChart = () => {
                         '<div class="text-gray-700 font-bold p-1">' +
                         "<span>" +
                         series[seriesIndex as number][
-                            dataPointIndex as number
+                        dataPointIndex as number
                         ] +
                         " kWh</span>" +
                         "</div>"
