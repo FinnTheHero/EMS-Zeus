@@ -4,8 +4,8 @@ import SysfailStatus from "../Components/SSEListener";
 
 const Dashboard = () => {
     return (
-        <div className="flex flex-row flex-wrap justify-center items-center">
-            <div className="lg:w-1/2 w-full mb-6 lg:mb-0 flex flex-col p-8">
+        <div className="flex flex-row flex-wrap lg:flex-nowrap justify-center items-center">
+            <div className="w-full lg:w-2/3 p-4 lg:border-r border-gray-800 flex flex-col justify-center">
                 <div className="mb-6 flex flex-col justify-center items-center">
                     <SysfailStatus />
                 </div>
@@ -46,7 +46,7 @@ const Dashboard = () => {
                     </div>
                 </div>
             </div>
-            <div className="lg:w-1/2 w-full">
+            <div className="w-full lg:w-3/5 p-4 flex flex-col flex-wrap justify-center">
                 <div className="mb-6">
                     <h2 className="text-xl text-center">Currently active modules</h2>
                 </div>
