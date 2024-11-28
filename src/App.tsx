@@ -8,26 +8,26 @@ import NotFoundPage from "./Pages/NotFoundPage";
 import TeamPage from "./Pages/TeamPage";
 
 function App() {
-    return (
-        <div className="App">
-            <RoutesManager />
-        </div>
-    );
+  return (
+    <div className="App">
+      <RoutesManager />
+    </div>
+  );
 }
 
 const RoutesManager = () => {
-    return (
-        <Router>
-            <Routes>
-                <Route path="/" element={<MainLayout />}>
-                    <Route index element={<HomePage />} />
-                    <Route path="*" element={<NotFoundPage />} />
-                    <Route path="/dashboard" element={<Dashboard />} />
-                    <Route path="/team" element={<TeamPage />} />
-                </Route>
-            </Routes>
-        </Router>
-    );
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<HomePage />} />
+          <Route path="*" element={<NotFoundPage />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/contact-us" element={<TeamPage />} />
+        </Route>
+      </Routes>
+    </Router>
+  );
 };
 
 export default App;
